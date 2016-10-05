@@ -1,0 +1,85 @@
+import os
+import urllib
+import gzip, binascii, struct
+import tensorflow as tf
+import numpy as  np
+import matplotlib.pyplot as plt
+
+%matplotlib inline
+
+# acc vector
+# mat_acc_x = np.array([np.linspace(-2, 4, num_examples), np.linspace(-6,6, num_examples)])
+
+# X += np.random.randn(2, num_examples)
+
+# x, y = X
+
+# mat_acc_y
+# mat_acc_z
+
+# ori vector
+# mat_ori
+
+# timestamp[]
+
+# timestamp = np.array([np.])
+# mat_acc_x = []
+
+
+with open("wave.txt", 'r') as fp:
+    
+    for line in fp.readlines():
+        sentence = line.split()
+        
+        if sentence[0] == 0:
+            acc_x = sentence[1]
+            acc_y = sentence[2]
+            acc_z = sentence[3]
+            
+            #print ('test : ', sentence[0])
+            print (tf.Constant([sentence[0], acc_x]))
+            mat_acc_x += tf.Variable([sentence[0], acc_x])
+            
+            
+            # print ('succ : ', mat_acc_x)
+            # print acc_x, acc_y, acc_z
+            
+        else:
+            ori_x = sentence[1]
+            ori_y = sentence[2]
+            ori_z = sentence[3]
+            # print ori_x, ori_y, ori_z
+
+        # print sentence[0]
+        
+print mat_acc_x
+        
+# print mat_acc_x
+timestamp, matrix_acc_x = mat_acc_x
+        
+# show and fit the graphs
+_, (ax1, ax2, ax3, ax4, ax5,ax6) = plt.subplots(1, 6)
+
+
+ax1.scatter(timestamp, matrix_acc_x, alpha=.7)
+
+# define graph labels
+ax1.set_xlabel("timestamp")
+ax1.set_ylabel("acc_x")
+
+ax2.set_xlabel("timestamp")
+ax2.set_ylabel("acc_y")
+
+ax3.set_xlabel("timestamp")
+ax3.set_ylabel("acc_z")
+
+ax4.set_xlabel("timestamp")
+ax4.set_ylabel("ori_x")
+
+ax5.set_xlabel("timestamp")
+ax5.set_ylabel("ori_y")
+
+ax6.set_xlabel("timestamp")
+ax6.set_ylabel("ori_z")
+
+
