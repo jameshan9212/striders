@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/bg_blank"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_profile_profile"
+        android:src="@drawable/iv_profile"
+        android:background="@drawable/bg_blank"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROFILE: UNIDENTIFIED"
+        android:gravity="center"
+        android:background="@drawable/bg_blank"
+        android:id="@+id/tv_profile_profile"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="ID: NONE"
+        android:gravity="center"
+        android:background="@drawable/bg_blank"
+        android:id="@+id/tv_profile_id"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PARAMS: NONE"
+        android:gravity="center"
+        android:background="@drawable/bg_blank"
+        android:id="@+id/tv_profile_params"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
